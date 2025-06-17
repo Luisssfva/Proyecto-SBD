@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera - Cine ESPOL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="h-full bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 font-['Poppins']">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-black bg-opacity-70 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <a href="/" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">
+                        Cine ESPOL
+                    </a>
+                    <div class="flex items-center space-x-6">
+                        <span id="username" class="text-white font-medium">Bienvenido, Usuario</span>
+                        <a href="/" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition duration-200">
+                            Cerrar Sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-6 py-12">
+            <h2 class="text-3xl font-bold text-white mb-8">Películas en cartelera</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Película 1 -->
+                <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden border border-gray-800 transition-all duration-300 hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/20">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/300x450/?movie,poster,1')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Avengers: Endgame</h3>
+                        <div class="flex items-center text-gray-400 text-sm mb-4">
+                            <span class="mr-3">Acción</span>
+                            <span>•</span>
+                            <span class="ml-3">181 min</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">Los Vengadores se reúnen para revertir el chasquido de Thanos.</p>
+                        <div class="flex space-x-3">
+                            <button class="flex-1 py-2 px-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition duration-200">
+                                Reservar
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition duration-200">
+                                Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 2 -->
+                <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden border border-gray-800 transition-all duration-300 hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/20">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/300x450/?movie,poster,2')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Dune</h3>
+                        <div class="flex items-center text-gray-400 text-sm mb-4">
+                            <span class="mr-3">Ciencia ficción</span>
+                            <span>•</span>
+                            <span class="ml-3">155 min</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">Paul Atreides se une a los Fremen para vengar a su familia.</p>
+                        <div class="flex space-x-3">
+                            <button class="flex-1 py-2 px-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition duration-200">
+                                Reservar
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition duration-200">
+                                Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Más películas... -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>

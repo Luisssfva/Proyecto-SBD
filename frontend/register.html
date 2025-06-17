@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Cine ESPOL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .input-effect {
+            transition: all 0.3s ease;
+        }
+        .input-effect:focus {
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+        }
+    </style>
+</head>
+<body class="h-full bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 font-['Poppins']">
+    <div class="min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-md">
+            <div class="text-center mb-10">
+                <a href="/" class="inline-block mb-4">
+                    <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">
+                        Cine ESPOL
+                    </span>
+                </a>
+                <h2 class="text-2xl font-bold text-white">Crea tu cuenta</h2>
+                <p class="text-gray-400 mt-2">Disfruta de los mejores estrenos</p>
+            </div>
+
+            <div class="bg-black bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-gray-800 shadow-2xl">
+                <form id="register-form">
+                    <div class="space-y-5">
+                        <div>
+                            <label for="fullname" class="block text-sm font-medium text-gray-300 mb-1">Nombre completo</label>
+                            <input type="text" id="fullname" required
+                                class="input-effect w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Correo ESPOL</label>
+                            <input type="email" id="email" required placeholder="usuario@espol.edu.ec"
+                                class="input-effect w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500">
+                        </div>
+
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-300 mb-1">Contraseña</label>
+                            <input type="password" id="password" required
+                                class="input-effect w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500">
+                        </div>
+
+                        <div>
+                            <label for="confirm-password" class="block text-sm font-medium text-gray-300 mb-1">Confirmar Contraseña</label>
+                            <input type="password" id="confirm-password" required
+                                class="input-effect w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500">
+                        </div>
+
+                        <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
+                            Registrarse
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-6 text-center">
+                    <p class="text-gray-400">¿Ya tienes cuenta? <a href="/login" class="text-amber-400 hover:text-amber-300 font-medium">Inicia sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
