@@ -1,3 +1,7 @@
+# NO TOQUEN NADA DEL CODIGO HIJUEPERRAS O LOS FUSILO
+
+
+
 # Proyecto-SBD
 Bienvenidos a **CinePolito**, un proyecto conformado por 4 estudiantes de la carrera de Ciencia de Datos e Inteligencia Artificial.
 ## Integrantes del Grupo:
