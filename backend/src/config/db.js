@@ -1,34 +1,32 @@
-const sql = require('mssql/msnodesqlv8');
+import sql from "mssql/msnodesqlv8.js";
+import dotenv from "dotenv";
 
-const config = {
-    server: 'DESKTOP-UGTJ58R',  
-    driver: 'msnodesqlv8',       
-    options: {
-        trustedConnection: true, 
-        trustServerCertificate: true
+dotenv.config();
+
+let pool;
+
+export const initConnection = async () => {
+    if (pool) return pool;
+    try {
+        pool = await sql.connect({
+            server: process.env.DB_SERVER,
+            database: process.env.DB_DATABASE,
+            port: Number(process.env.DB_PORT) || 1433,
+            driver: "msnodesqlv8",
+            options: {
+                trustedConnection: true,
+                trustServerCertificate: true
+            }
+        });
+        console.log("Conexión a la base de datos exitosa");
+        return pool;
+    } catch (err) {
+        console.error("Error de conexión:", err);
+        throw err;
     }
 };
 
-async function createDatabase() {
-    try {
-        const pool = await sql.connect(config);
-        console.log('Conexión exitosa a SQL Server');
-
-        const result = await pool.request().query(`
-            IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'CineDB')
-            BEGIN
-                CREATE DATABASE CineDB;
-                PRINT 'Base de datos CineDB creada.';
-            END
-            ELSE
-                PRINT 'La base de datos CineDB ya existe.';
-        `);
-
-        console.log('Script ejecutado correctamente');
-        await pool.close();
-    } catch (err) {
-        console.error('Error:', err.message);
-    }
-}
-
-createDatabase();
+export const getConnection = () => {
+    if (!pool) throw new Error("No hay conexión inicializada");
+    return pool;
+};
