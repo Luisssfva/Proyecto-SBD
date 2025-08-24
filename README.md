@@ -21,7 +21,7 @@ Este es un proyecto para la materia de Sistemas de Bases de Datos, somos 4 estud
 
 - **Frontend**: React 18, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express
-- **Base de Datos**: MySQL
+- **Base de Datos**: SQL Server Management Studio
 - **Iconos**: React Icons
 
 ## Instalación
