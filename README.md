@@ -29,7 +29,7 @@ Este es un proyecto para la materia de Sistemas de Bases de Datos, somos 4 estud
 1. **Clona el repositorio**
    ```bash
    git clone <url-del-repositorio>
-   cd ProyectoSBDFront
+   cd // Ruta donde guardaste tu repositorio localmente //
    ```
 
 2. **Instala dependencias del frontend**
