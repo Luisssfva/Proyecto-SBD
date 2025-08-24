@@ -1,28 +1,30 @@
 # CinePolito - Sistema de Reservas de Cine
 
-Este es un proyecto de la materia Sistemas de Bases de Datos, nuestro grupo está conformado por los estudiantes:
+Este es un proyecto para la materia de Sistemas de Bases de Datos, somos 4 estudiantes de la Escuela Superior Politécnica del Litoral 🐢, hicimos este proyecto con esfuerzo y dedicación espero les guste <3.
+
+## Autores
 
 - Luis Daniel Flores
+- Anthony Mosquera
+- Andrey Arias
+- Anthony Paredes
 
+## Características
 
-## ✨ Características
+- Interfaz moderna con diseño responsive
+- Sistema de autenticación (login/registro)
+- Reserva de entradas con selección de películas, horarios y asientos
+- Animaciones fluidas con Framer Motion
+- Compatible con dispositivos móviles
 
-- 🎨 **Diseño Moderno**: Interfaz elegante con gradientes y animaciones suaves
-- 🔐 **Autenticación**: Sistema de login y registro con validaciones
-- 🎟️ **Reserva de Entradas**: Selección de películas, horarios y asientos
-- 📱 **Responsive**: Diseño adaptativo para todos los dispositivos
-- ⚡ **Animaciones**: Transiciones fluidas con Framer Motion
-- 🎯 **UX Mejorada**: Feedback visual y estados de carga
+## Tecnologías
 
-## 🚀 Tecnologías Utilizadas
+- **Frontend**: React 18, Tailwind CSS, Framer Motion
+- **Backend**: Node.js, Express
+- **Base de Datos**: MySQL
+- **Iconos**: React Icons
 
-- **React 18** - Biblioteca de interfaz de usuario
-- **Tailwind CSS** - Framework de CSS utilitario
-- **Framer Motion** - Biblioteca de animaciones
-- **React Icons** - Iconografía moderna
-- **PostCSS** - Procesador de CSS
-
-## 📦 Instalación
+## Instalación
 
 1. **Clona el repositorio**
    ```bash
@@ -30,120 +32,95 @@ Este es un proyecto de la materia Sistemas de Bases de Datos, nuestro grupo est�
    cd ProyectoSBDFront
    ```
 
-2. **Instala las dependencias**
+2. **Instala dependencias del frontend**
    ```bash
    npm install
    ```
 
-3. **Inicia el servidor de desarrollo**
+3. **Instala dependencias del backend**
+   ```bash
+   cd backend
+   npm install
+   ```
+
+4. **Configura la base de datos**
+   - Ejecuta los scripts SQL en `backend/database/`
+   - Configura las credenciales en `backend/src/config/db.js`
+
+5. **Inicia el servidor backend**
+   ```bash
+   cd backend
+   npm start
+   ```
+
+6. **Inicia el frontend**
    ```bash
    npm start
    ```
 
-4. **Abre tu navegador**
+7. **Abre tu navegador**
    ```
    http://localhost:3000
    ```
 
-## 🎯 Uso
-
-### Página Principal
-- Visualiza la página de bienvenida con información sobre CinePolito
-- Navega entre las opciones de inicio de sesión y registro
+## Funcionalidades
 
 ### Autenticación
-- **Login**: Usa cualquier usuario y contraseña para probar la aplicación
-- **Registro**: Crea una nueva cuenta con validación de campos
+- Login con validación de campos
+- Registro de nuevos usuarios
+- Gestión de sesiones
 
 ### Reserva de Entradas
-1. Selecciona una película de la cartelera
-2. Elige el horario preferido (14:00, 17:00, 20:00)
-3. Selecciona tus asientos en el mapa interactivo
-4. Confirma tu reserva
+- Visualización de cartelera de películas
+- Selección de horarios disponibles (14:00, 17:00, 20:00)
+- Mapa interactivo de asientos
+- Confirmación y gestión de reservas
 
-## 🎨 Mejoras de Diseño Implementadas
-
-### Sistema de Colores
-- Paleta de colores consistente con variables CSS
-- Gradientes modernos y atractivos
-- Estados visuales claros para interacciones
-
-### Tipografía
-- Fuente Poppins para mejor legibilidad
-- Jerarquía tipográfica clara
-- Pesos de fuente optimizados
-
-### Componentes
-- **Cards modernas** con sombras y bordes redondeados
-- **Botones interactivos** con efectos hover
-- **Formularios mejorados** con iconos y validación
-- **Animaciones suaves** para transiciones
-
-### Experiencia de Usuario
-- **Estados de carga** con spinners animados
-- **Feedback visual** para todas las acciones
-- **Navegación intuitiva** entre secciones
-- **Responsive design** para móviles y tablets
-
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
-src/
-├── components/
-│   ├── Login.js          # Componente de inicio de sesión
-│   ├── Register.js       # Componente de registro
-│   ├── Main.js          # Componente principal de reservas
-│   ├── Loading.js       # Componente de carga
-│   └── Notification.js  # Componente de notificaciones
-├── App.js               # Componente principal
-├── index.js             # Punto de entrada
-└── index.css            # Estilos globales
+ProyectoSBDFront/
+├── src/                    # Frontend React
+│   ├── components/
+│   │   ├── Login.js       # Componente de autenticación
+│   │   ├── Register.js    # Componente de registro
+│   │   ├── Main.js        # Componente principal de reservas
+│   │   ├── Loading.js     # Componente de carga
+│   │   └── Notification.js # Componente de notificaciones
+│   ├── App.js             # Componente principal
+│   ├── index.js           # Punto de entrada
+│   └── index.css          # Estilos globales
+├── backend/               # Servidor Node.js
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── db.js      # Configuración de base de datos
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js      # Rutas de autenticación
+│   │   │   ├── movies.routes.js    # Rutas de películas
+│   │   │   └── reservation.routes.js # Rutas de reservas
+│   │   └── server.js      # Servidor principal
+│   └── database/          # Scripts SQL
+│       ├── 01_creacion_base_datos.sql
+│       ├── 02_indices_optimizacion.sql
+│       ├── 03_datos_iniciales.sql
+│       ├── 04_vistas.sql
+│       ├── 05_procedimientos_almacenados.sql
+│       ├── 06_triggers.sql
+│       └── 07_consultas_complejas.sql
+├── public/                # Archivos estáticos
+└── package.json           # Dependencias del frontend
 ```
 
-## 🛠️ Scripts Disponibles
+## Scripts Disponibles
 
 - `npm start` - Inicia el servidor de desarrollo
 - `npm build` - Construye la aplicación para producción
 - `npm test` - Ejecuta las pruebas
-- `npm eject` - Expone la configuración de webpack
-
-## 🎨 Personalización
-
-### Colores
-Los colores se pueden personalizar editando las variables CSS en `src/index.css`:
-
-```css
-:root {
-  --primary-500: #3b82f6;  /* Color principal */
-  --secondary-500: #ec4899; /* Color secundario */
-}
-```
-
-### Animaciones
-Las animaciones se pueden ajustar en `tailwind.config.js`:
-
-```javascript
-animation: {
-  'fade-in': 'fadeIn 0.5s ease-in-out',
-  'slide-up': 'slideUp 0.3s ease-out',
-}
-```
-
-## 📱 Compatibilidad
-
-- ✅ Chrome (recomendado)
-- ✅ Firefox
-- ✅ Safari
-- ✅ Edge
-- ✅ Dispositivos móviles
 
 
+## Compatibilidad
 
-## Autor :D
+- Chrome, Firefox, Safari, Edge
 
-**Luis Flores** - Backend Developer 
 
----
-
-Fue un proyecto hecho con mucho amor, cariño y dedicación, me gusta la programación <3
 
